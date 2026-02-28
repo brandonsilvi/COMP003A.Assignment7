@@ -27,7 +27,38 @@ namespace COMP003A.Assignment7
                 string input = Console.ReadLine();
                 int choice = 0;
                 
-                
+                //try catch for non numeric inputs
+                try
+                {
+                    choice = int.Parse(input);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Invalid numeric input.");
+                    continue; 
+                }
+                //input validation via logic
+                if (choice < 1 || choice > 4)
+                {
+                    Console.WriteLine("Choice outside of valid range");
+                }
+                else if (choice == 1)
+                {
+                    Console.WriteLine("\nValues:");
+                    foreach (int score in scores)
+                    {
+                        Console.WriteLine(score);
+                    }
+                }
+                else if (choice == 2)
+                {
+                    int total = 0;
+                    //calc total
+                    foreach (int score in scores)
+                    {
+                        total += score;
+                    }
+                }
             }
         }
     }
