@@ -58,7 +58,22 @@ namespace COMP003A.Assignment7
                     {
                         total += score;
                     }
+                    Console.WriteLine($"Total: {total}");
                 }
+                else if (choice == 3)
+                {
+                    int total = 0;
+                    
+                    //calc total avg
+                    foreach (int score in scores)
+                    {
+                        total += score;
+                    }
+
+                    double average = (double)total / scores.Length;
+                    Console.WriteLine($"Average: {average}");
+                }
+                else if (choice == 4)
             }
         }
     }
